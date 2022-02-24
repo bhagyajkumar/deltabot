@@ -12,7 +12,7 @@ class TestCog(commands.Cog):
         dbt1 = time.time()
         await self.bot.db.fetchval("SELECT 1")
         database_latency = (time.time() - dbt1) * 1000
-        embed = discord.Embed(title="PIng", color=self.bot.default_color)
+        embed = discord.Embed(title="PIng", color=discord.Color.blurple)
         embed.add_field(name="websocket Latency", value=f"```js\n{str(round(websocket_latency))} ms```", inline=False)
         embed.add_field(name="database latency", value=f"```js\n{str(round(database_latency))} ms```", inline=False)
         mest1 = time.time()
