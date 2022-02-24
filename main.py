@@ -19,5 +19,8 @@ cogs = [
     "cogs.test"
 ]
 
+for cog in cogs:
+    bot.load_extension(cog)
+
 if __name__ == "__main__":
     bot.run(os.environ.get("BOT_TOKEN"))
